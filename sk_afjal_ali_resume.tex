@@ -1,0 +1,187 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Sk Afjal Ali
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/afzalio}{\Large Sk Afjal Ali}} & Email: \href{mailto:skafjalali2001@gmail.com}{skafjalali2001@gmail.com}\\
+  \href{https://www.linkedin.com/in/sk-afjal-ali-763336285}{linkedin.com/in/sk-afjal-ali-763336285} & Mobile: \href{tel:+918420078430}{+91 8420078430} \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{Backend and full stack developer with 2 years of experience building and maintaining enterprise web applications using Laravel, CodeIgniter 3, React, Next.js, and MySQL. Strong background in legacy system modernization, MySQL stored procedure optimization, reporting, REST APIs, WebSockets, and multi-tenant application development.}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Calcutta Anglo Gujarati College}{Kolkata, West Bengal}
+      {Bachelor of Computer Applications (BCA)}{Aug 2019 -- Jun 2022}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Softhought}{Dhakuria, Kolkata, West Bengal, India}
+      {Backend Developer}{Aug 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Tea Samrat Tea Buyer Application}
+          {Revamped a large legacy CodeIgniter 3 enterprise application covering accounting, purchasing, stock management, tea blending, sales, and reporting. Worked on nearly the entire application independently and handled feature development, debugging, and deployment support.}
+        \resumeItem{Database Optimization}
+          {Refactored complex MySQL stored procedures by replacing cursor-based logic with efficient set-based queries, improving query performance and maintainability.}
+        \resumeItem{Reporting and Data Handling}
+          {Implemented server-side DataTables rendering for large datasets and developed Excel export, PDF reports, import functionality, and audit log workflows.}
+        \resumeItem{Core Platform Features}
+          {Built and maintained REST APIs, authentication and login, role and permission management, dashboards, notifications, inventory modules, purchase modules, sales modules, accounting reports, and file upload flows.}
+        \resumeItem{Deployment}
+          {Deployed the application on a Linux server and configured Apache for hosting and runtime support.}
+        \resumeItem{Mukti}
+          {Developed a modern Laravel and React application for yoga package management using a multi-tenant architecture. Built the application end to end with Material UI, WebSockets via Laravel Reverb, and real-time notification support.}
+        \resumeItem{Business Features}
+          {Implemented authentication and role management, package management, member management, trainer management, booking and scheduling, payment integration, admin dashboards, REST APIs, reports, email/SMS notifications, and file uploads.}
+        \resumeItem{CWMS (Client Workman Management System)}
+          {Built reporting functionality for an HRMS and attendance management system integrated with Hikvision attendance devices. Focused on generating business reports and handling data extraction for operations and administration.}
+        \resumeItem{Reporting}
+          {Developed and maintained Excel and PDF reporting modules and supported reporting logic using Laravel.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Sound Seeder}
+      {Android application built with TypeScript for synchronized music playback across multiple devices on the same local network. \href{https://github.com/afzalio/sound-seeder.git}{GitHub} | \href{https://github.com/afzalio/sound-seeder/raw/main/releases/sound-seeder-v1.0.apk}{APK}}
+    \resumeSubItem{Decimen Optical Transfer}
+      {Open-source contribution available on GitHub. \href{https://github.com/afzalio/decimen-optical-transfer.git}{GitHub}}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{\textbf{Programming Languages:} PHP, JavaScript, TypeScript, SQL, HTML, CSS}
+    \resumeItemPlain{\textbf{Backend:} Laravel, CodeIgniter 3, Node.js, Express.js}
+    \resumeItemPlain{\textbf{Frontend:} React.js, Next.js, Material UI, Bootstrap}
+    \resumeItemPlain{\textbf{Database:} MySQL, MariaDB}
+    \resumeItemPlain{\textbf{Tools:} Git, GitHub, Postman, Composer, npm, Vite}
+    \resumeItemPlain{\textbf{Server / DevOps:} Linux, Apache}
+    \resumeItemPlain{\textbf{APIs / Realtime:} REST APIs, SOAP APIs, JWT, WebSockets, Laravel Reverb}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{Arduino Certification}
+  \resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{English, Hindi, Bengali}
+  \resumeSubHeadingListEnd
+
+%-----------INTERESTS-----------------
+\section{Interests}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{Playing Guitar, Music, Photography}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
