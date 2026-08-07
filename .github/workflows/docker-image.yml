@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Compile Resume PDF
 
 on:
   push:
@@ -6,21 +6,29 @@ on:
   pull_request:
     branches: [ master, main ]
 
+permissions:
+  contents: write
+
 jobs:
-  compile:
-    name: Compile resume pdf
+  build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
         with:
-          image: thomasweise/docker-texlive-full:latest
-          options: -v ${{ github.workspace }}:/data
-          run: |
-            cd data
-            pdflatex sk_afjal_ali_resume.tex
-      - uses: stefanzweifel/git-auto-commit-action@v5
+          root_file: sk_afjal_ali_resume.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: Apply pdflatex changes
+          name: sk_afjal_ali_resume
+          path: sk_afjal_ali_resume.pdf
+
+      - name: Commit PDF to repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated PDF build: sk_afjal_ali_resume.pdf"
+          file_pattern: "*.pdf"
