@@ -1,4 +1,4 @@
-# Sk Afjal Ali - Resume
+# Anil Sha - Resume
 
 A single-page, one-column resume for software developers. Built using LaTeX templates.
 
@@ -8,7 +8,7 @@ Build using Docker:
 
 ```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sk_afjal_ali_resume.tex
+docker run --rm -i -v "$PWD":/data latex pdflatex anil_sha_resume.tex
 ```
 
 ### Preview
@@ -17,4 +17,4 @@ docker run --rm -i -v "$PWD":/data latex pdflatex sk_afjal_ali_resume.tex
 
 ### License
 
-Format is MIT but all the data is owned by Sk Afjal Ali.
+Format is MIT but all the data is owned by Anil Sha.

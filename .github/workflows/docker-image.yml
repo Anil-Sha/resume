@@ -19,16 +19,16 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: sk_afjal_ali_resume.tex
+          root_file: anil_sha_resume.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sk_afjal_ali_resume
-          path: sk_afjal_ali_resume.pdf
+          name: anil_sha_resume
+          path: anil_sha_resume.pdf
 
       - name: Commit PDF to repository
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automated PDF build: sk_afjal_ali_resume.pdf"
+          commit_message: "Automated PDF build: anil_sha_resume.pdf"
           file_pattern: "*.pdf"
